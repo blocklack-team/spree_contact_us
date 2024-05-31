@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Deface::Override.new(virtual_path: 'spree/shared/_main_nav_bar',
+ContactUsInHeader = Deface::Override.new(virtual_path: 'spree/shared/_main_nav_bar',
                      name: 'contact_us_in_header',
                      insert_bottom: '#main-nav-bar .nav.navbar-nav:first-child',
                      text: "<li class='<%= (request.fullpath.gsub('//','/') == '/contact-us') ? 'active' : ''%>'>
